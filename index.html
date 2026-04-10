@@ -1,329 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Studio Bella Hair – Cabeleireiro em São Paulo</title>
-  <meta name="description" content="Studio Bella Hair – Cortes, coloração e tratamentos capilares profissionais em São Paulo. Agende pelo WhatsApp!" />
-
-  <!-- Google Fonts -->A
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Bella Hair</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 { font-size: 20px; }
+    nav a {
+      color: #fff;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+    .hero {
+      height: 80vh;
+      background: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 40px;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 25px;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+    }
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar" id="navbar">
-    <div class="container navbar__inner">
-      <a href="#inicio" class="navbar__logo">Studio Bella Hair</a>
+<header>
+  <h1>Studio Bella Hair</h1>
+  <nav>
+    <a href="#">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
 
-      <nav class="navbar__links" id="navLinks">
-        <a href="#inicio" class="navbar__link">Início</a>
-        <a href="#sobre" class="navbar__link">Sobre</a>
-        <a href="#servicos" class="navbar__link">Serviços</a>
-        <a href="#galeria" class="navbar__link">Galeria</a>
-        <a href="#depoimentos" class="navbar__link">Depoimentos</a>
-        <a href="#contato" class="navbar__link">Contato</a>
-      </nav>
+<section class="hero">
+  <h2>Realce sua beleza com profissionais especialistas</h2>
+</section>
 
-      <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
+<section class="section" id="servicos">
+  <h2>Nossos Serviços</h2>
+  <div class="services">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e">
+      <h3>Corte Feminino</h3>
+      <p>Estilo moderno e personalizado</p>
     </div>
-
-    <!-- Mobile menu -->
-    <div class="navbar__mobile" id="mobileMenu">
-      <a href="#inicio" class="navbar__mobile-link">Início</a>
-      <a href="#sobre" class="navbar__mobile-link">Sobre</a>
-      <a href="#servicos" class="navbar__mobile-link">Serviços</a>
-      <a href="#galeria" class="navbar__mobile-link">Galeria</a>
-      <a href="#depoimentos" class="navbar__mobile-link">Depoimentos</a>
-      <a href="#contato" class="navbar__mobile-link">Contato</a>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f">
+      <h3>Coloração</h3>
+      <p>Técnicas avançadas e tendências</p>
     </div>
-  </header>
-
-  <!-- ===== HERO ===== -->
-  <section id="inicio" class="hero">
-    <div class="hero__bg">
-      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1920&q=85&fit=crop" alt="Salão de beleza luxury" />
-      <div class="hero__overlay"></div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df">
+      <h3>Escova & Modelagem</h3>
+      <p>Acabamento perfeito para qualquer ocasião</p>
     </div>
-    <div class="container hero__content">
-      <h1 class="hero__title reveal">Realce sua beleza com profissionais especialistas</h1>
-      <p class="hero__subtitle reveal">Cortes, coloração e tratamentos para você se sentir incrível todos os dias</p>
-      <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="btn btn--gold reveal">
-        Agendar pelo WhatsApp
-      </a>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== SOBRE ===== -->
-  <section id="sobre" class="about">
-    <div class="container about__inner">
-      <div class="about__image reveal">
-        <div class="about__image-shadow"></div>
-        <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?w=800&q=85&fit=crop" alt="Profissional do Studio Bella Hair" />
-      </div>
+<section class="section" id="contato">
+  <h2>Agende seu horário</h2>
+  <p>Clique no botão abaixo e fale conosco agora mesmo</p>
+  <a class="btn" href="https://wa.me/5500000000000">Agendar pelo WhatsApp</a>
+</section>
 
-      <div class="about__text">
-        <div class="section-label reveal">
-          <span class="section-label__line"></span>
-          <span class="section-label__text">Sobre Nós</span>
-        </div>
-        <h2 class="section-title reveal">Transformando autoestima através da beleza</h2>
-        <p class="about__desc reveal">
-          Somos um salão especializado em transformar autoestima através da beleza. Nossa equipe é formada por profissionais experientes prontos para oferecer o melhor atendimento. Com técnicas modernas e produtos de alta qualidade, garantimos resultados que vão além das suas expectativas.
-        </p>
-        <div class="about__stats reveal">
-          <div class="about__stat">
-            <span class="about__stat-number">500+</span>
-            <span class="about__stat-label">Clientes Satisfeitas</span>
-          </div>
-          <div class="about__stat">
-            <span class="about__stat-number">8</span>
-            <span class="about__stat-label">Anos de Experiência</span>
-          </div>
-          <div class="about__stat">
-            <span class="about__stat-number">5</span>
-            <span class="about__stat-label">Profissionais Especialistas</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<footer>
+  <p>© 2026 Studio Bella Hair - Todos os direitos reservados</p>
+</footer>
 
-  <!-- ===== SERVIÇOS ===== -->
-  <section id="servicos" class="services">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label section-label--center reveal">
-          <span class="section-label__line"></span>
-          <span class="section-label__text">Nossos Serviços</span>
-          <span class="section-label__line"></span>
-        </div>
-        <h2 class="section-title section-title--center reveal">Cuidado completo para seus cabelos</h2>
-      </div>
-
-      <div class="services__grid">
-
-        <div class="service-card reveal">
-          <div class="service-card__bar"></div>
-          <div class="service-card__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><path d="M6 9v12l6-3 6 3V9"/><path d="m6 9 6 3 6-3"/></svg>
-          </div>
-          <h3 class="service-card__title">Corte Feminino</h3>
-          <p class="service-card__desc">Cortes personalizados que valorizam seus traços e personalidade, criados por nossas especialistas.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="service-card__bar"></div>
-          <div class="service-card__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/><path d="M19 3v4"/><path d="M21 5h-4"/></svg>
-          </div>
-          <h3 class="service-card__title">Escova Profissional</h3>
-          <p class="service-card__desc">Disciplina e brilho intenso com técnicas profissionais que deixam os fios perfeitos.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="service-card__bar"></div>
-          <div class="service-card__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
-          </div>
-          <h3 class="service-card__title">Coloração</h3>
-          <p class="service-card__desc">Transformação completa com cores vibrantes ou sutis, respeitando a saúde dos seus fios.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="service-card__bar"></div>
-          <div class="service-card__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>
-          </div>
-          <h3 class="service-card__title">Hidratação Capilar</h3>
-          <p class="service-card__desc">Tratamentos profundos que nutrem, reparam e devolvem a vida aos seus cabelos.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="service-card__bar"></div>
-          <div class="service-card__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="M2 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="M12 18v4"/><path d="m19.07 19.07-2.83-2.83"/><path d="M18 12h4"/><path d="m19.07 4.93-2.83 2.83"/></svg>
-          </div>
-          <h3 class="service-card__title">Progressiva</h3>
-          <p class="service-card__desc">Fios lisos, macios e sem frizz com nosso tratamento progressivo de longa duração.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== GALERIA ===== -->
-  <section id="galeria" class="gallery">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label section-label--center reveal">
-          <span class="section-label__line"></span>
-          <span class="section-label__text">Nossa Galeria</span>
-          <span class="section-label__line"></span>
-        </div>
-        <h2 class="section-title section-title--center reveal">Resultados que falam por si</h2>
-      </div>
-
-      <div class="gallery__grid">
-        <div class="gallery__item reveal">
-          <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&q=85&fit=crop" alt="Resultado cabelo 1" />
-          <div class="gallery__overlay"><span>Ver Detalhes</span></div>
-        </div>
-        <div class="gallery__item reveal">
-          <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?w=600&q=85&fit=crop" alt="Resultado cabelo 2" />
-          <div class="gallery__overlay"><span>Ver Detalhes</span></div>
-        </div>
-        <div class="gallery__item reveal">
-          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=85&fit=crop" alt="Resultado cabelo 3" />
-          <div class="gallery__overlay"><span>Ver Detalhes</span></div>
-        </div>
-        <div class="gallery__item reveal">
-          <img src="https://images.unsplash.com/photo-1605980776566-0486c3ac7617?w=600&q=85&fit=crop" alt="Resultado cabelo 4" />
-          <div class="gallery__overlay"><span>Ver Detalhes</span></div>
-        </div>
-        <div class="gallery__item reveal">
-          <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=85&fit=crop" alt="Resultado cabelo 5" />
-          <div class="gallery__overlay"><span>Ver Detalhes</span></div>
-        </div>
-        <div class="gallery__item reveal">
-          <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=600&q=85&fit=crop" alt="Resultado cabelo 6" />
-          <div class="gallery__overlay"><span>Ver Detalhes</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== DEPOIMENTOS ===== -->
-  <section id="depoimentos" class="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label section-label--center reveal">
-          <span class="section-label__line section-label__line--light"></span>
-          <span class="section-label__text section-label__text--light">Depoimentos</span>
-          <span class="section-label__line section-label__line--light"></span>
-        </div>
-        <h2 class="section-title section-title--center section-title--light reveal">O que nossas clientes dizem</h2>
-      </div>
-
-      <div class="testimonials__grid">
-
-        <div class="testimonial-card reveal">
-          <div class="testimonial-card__stars">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <p class="testimonial-card__text">"Simplesmente amei o atendimento! Meu cabelo ficou perfeito, exatamente como eu queria. Me sinto uma nova pessoa!"</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">JR</div>
-            <span class="testimonial-card__name">Juliana R.</span>
-          </div>
-        </div>
-
-        <div class="testimonial-card reveal">
-          <div class="testimonial-card__stars">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <p class="testimonial-card__text">"Incrível! A equipe do Studio Bella é muito atenciosa e profissional. Já indiquei para todas as minhas amigas."</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">MS</div>
-            <span class="testimonial-card__name">Mariana S.</span>
-          </div>
-        </div>
-
-        <div class="testimonial-card reveal">
-          <div class="testimonial-card__stars">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <p class="testimonial-card__text">"Melhor salão que já fui! A hidratação transformou completamente meu cabelo. Voltarei com certeza!"</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">AC</div>
-            <span class="testimonial-card__name">Amanda C.</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CTA ===== -->
-  <section class="cta">
-    <div class="cta__bg"></div>
-    <div class="container cta__content">
-      <h2 class="cta__title reveal">Pronta para transformar seu visual?</h2>
-      <p class="cta__sub reveal">Agende agora e dê o primeiro passo para se sentir incrível!</p>
-      <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="btn btn--dark reveal">
-        Falar no WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer id="contato" class="footer">
-    <div class="container footer__grid">
-
-      <div class="footer__col">
-        <div class="footer__logo">Studio Bella Hair</div>
-        <p class="footer__tagline">Onde mulheres encontram sua melhor versão através de cuidados excepcionais e atendimento personalizado.</p>
-      </div>
-
-      <div class="footer__col">
-        <h3 class="footer__heading">Contato</h3>
-        <ul class="footer__list">
-          <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            Rua Exemplo, 123 – São Paulo, SP
-          </li>
-          <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.89 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.81 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            (11) 99999-9999
-          </li>
-          <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            @studiobellahair
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer__col">
-        <h3 class="footer__heading">Horário de Funcionamento</h3>
-        <ul class="footer__list">
-          <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>Segunda a Sexta: 9h – 19h<br />Sábado: 9h – 17h</span>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="footer__bottom">
-      <p>© 2024 Studio Bella Hair. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- ===== FLOATING WHATSAPP ===== -->
-  <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-    <span class="whatsapp-float__tooltip">Agende seu horário!</span>
-  </a>
-
-  <script src="script.js"></script>
 </body>
 </html>
