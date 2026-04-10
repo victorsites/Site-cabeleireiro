@@ -4,74 +4,153 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studio Bella Hair</title>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f8f5f2;
+      color: #333;
+    }
+
     header {
-      background: #111;
+      background: #1a1a1a;
       color: #fff;
-      padding: 15px;
+      padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
     }
-    header h1 { font-size: 20px; }
+
+    header h1 { font-size: 22px; }
+
     nav a {
       color: #fff;
-      margin-left: 15px;
+      margin-left: 20px;
       text-decoration: none;
+      font-size: 14px;
     }
+
     .hero {
-      height: 80vh;
-      background: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover;
+      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
       text-align: center;
+      color: #fff;
+      padding: 20px;
     }
+
     .hero h2 {
-      font-size: 40px;
-      background: rgba(0,0,0,0.5);
-      padding: 20px;
-      border-radius: 10px;
+      font-size: 42px;
+      margin-bottom: 15px;
     }
-    .section {
-      padding: 40px 20px;
-      text-align: center;
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
     }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .card {
-      border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 10px;
-    }
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
+
     .btn {
-      display: inline-block;
-      margin-top: 20px;
       padding: 15px 25px;
-      background: #25D366;
+      background: #c59d5f;
       color: white;
       text-decoration: none;
-      border-radius: 10px;
+      border-radius: 8px;
+      font-weight: bold;
     }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .testimonials {
+      background: #fff;
+    }
+
+    .testimonial {
+      background: #f1ece7;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .cta {
+      text-align: center;
+      background: #1a1a1a;
+      color: white;
+      padding: 50px 20px;
+    }
+
     footer {
       background: #111;
       color: #fff;
       text-align: center;
       padding: 20px;
+      font-size: 14px;
     }
+
+    @media(max-width: 768px) {
+      .about { grid-template-columns: 1fr; }
+      .hero h2 { font-size: 30px; }
+    }
+
   </style>
 </head>
+
 <body>
 
 <header>
@@ -79,39 +158,81 @@
   <nav>
     <a href="#">Início</a>
     <a href="#servicos">Serviços</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#depoimentos">Depoimentos</a>
     <a href="#contato">Contato</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h2>Realce sua beleza com profissionais especialistas</h2>
+  <div>
+    <h2>Realce sua beleza com profissionais especialistas</h2>
+    <p>Cortes, coloração e tratamentos para você se sentir incrível todos os dias</p>
+    <a class="btn" href="#contato">Agendar agora</a>
+  </div>
 </section>
 
 <section class="section" id="servicos">
   <h2>Nossos Serviços</h2>
   <div class="services">
+
     <div class="card">
       <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e">
-      <h3>Corte Feminino</h3>
-      <p>Estilo moderno e personalizado</p>
+      <div class="card-content">
+        <h3>Corte Feminino</h3>
+        <p>Estilo moderno e personalizado para cada cliente</p>
+      </div>
     </div>
+
     <div class="card">
       <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f">
-      <h3>Coloração</h3>
-      <p>Técnicas avançadas e tendências</p>
+      <div class="card-content">
+        <h3>Coloração</h3>
+        <p>Técnicas avançadas com resultados naturais</p>
+      </div>
     </div>
+
     <div class="card">
       <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df">
-      <h3>Escova & Modelagem</h3>
-      <p>Acabamento perfeito para qualquer ocasião</p>
+      <div class="card-content">
+        <h3>Escova & Modelagem</h3>
+        <p>Acabamento perfeito para qualquer ocasião</p>
+      </div>
     </div>
+
   </div>
 </section>
 
-<section class="section" id="contato">
-  <h2>Agende seu horário</h2>
-  <p>Clique no botão abaixo e fale conosco agora mesmo</p>
-  <a class="btn" href="https://wa.me/5500000000000">Agendar pelo WhatsApp</a>
+<section class="section about" id="sobre">
+  <div>
+    <h2>Sobre o salão</h2>
+    <p>Somos especialistas em beleza e autoestima. Trabalhamos com técnicas modernas e atendimento personalizado para entregar sempre o melhor resultado para nossas clientes.</p>
+    <br>
+    <p>Nosso objetivo é fazer você sair daqui se sentindo mais confiante e bonita.</p>
+  </div>
+  <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702">
+</section>
+
+<section class="section testimonials" id="depoimentos">
+  <h2>Depoimentos</h2>
+
+  <div class="testimonial">
+    <p>"Atendimento incrível, amei meu cabelo!"</p>
+    <strong>- Juliana</strong>
+  </div>
+
+  <div class="testimonial">
+    <p>"Profissionais excelentes e ambiente maravilhoso."</p>
+    <strong>- Mariana</strong>
+  </div>
+
+</section>
+
+<section class="cta" id="contato">
+  <h2>Agende seu horário agora</h2>
+  <p>Entre em contato pelo WhatsApp e reserve seu atendimento</p>
+  <br>
+  <a class="btn" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
 </section>
 
 <footer>
